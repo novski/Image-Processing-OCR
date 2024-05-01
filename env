@@ -1,0 +1,21 @@
+# MQTT Configuration
+MQTT_BROKER=mqtt.example.com
+MQTT_TOPIC_USB=text_recognition/usb
+MQTT_TOPIC_PICAMERA=text_recognition/picamera
+MQTT_USERNAME=my_username
+MQTT_PASSWORD=my_password
+
+# Camera Configuration
+ENABLE_USB_CAMERA=true
+ENABLE_PICAMERA=true
+
+# GPIO Pins Configuration
+LED_PIN_USB=17
+LED_PIN_PICAMERA=18
+
+# Picture Paths
+PICTURE_PATH_USB=/home/pi/captured_image_usb.jpg
+PICTURE_PATH_PICAMERA=/home/pi/captured_image_picamera.jpg
+
+# Looptime in minutes:
+LOOP_TIME=3600
