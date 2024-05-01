@@ -1,6 +1,7 @@
 import os
 import time
 import subprocess
+from picamera2 import Picamera2
 import easyocr
 import paho.mqtt.client as mqtt
 import pigpio
@@ -34,9 +35,9 @@ def capture_usb_image(image_path, flash_pin):
 # Function to capture an image with PiCamera
 def capture_picamera_image(image_path, flash_pin):
     # Initialize PiCamera
-    with picamera.PiCamera() as camera:
-        # Capture an image
-        camera.capture(image_path)
+    picam2 = Picamera2()
+    # Capture an image
+    picam2.start_and_capture_file(image_path)
     flash_led(flash_pin, 0.5)  # Flash LED
 
 # Function to process image and send value over MQTT
